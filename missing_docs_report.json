@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "total_missing_docs": 5
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund",
+      "missing_items": [
+        "Type purpose",
+        "Field descriptions",
+        "Usage example"
+      ],
+      "importance": "Defines the data structure for funds, essential for type safety and understanding the domain."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService",
+      "missing_items": [
+        "Class purpose",
+        "Constructor description",
+        "Method overviews"
+      ],
+      "importance": "Core service for managing fund data, used throughout the application."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description",
+        "Usage example"
+      ],
+      "importance": "Critical for retrieving specific fund information."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description",
+        "Usage example"
+      ],
+      "importance": "Allows filtering funds by risk level for user interfaces."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description",
+        "Usage example"
+      ],
+      "importance": "Provides statistical insight into fund performance."
+    }
+  ]
+}

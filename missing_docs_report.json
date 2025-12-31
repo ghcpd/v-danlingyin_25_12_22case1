@@ -1,0 +1,128 @@
+{
+  "summary": {
+    "total_missing_docs": 6,
+    "files_analyzed": 1,
+    "documentation_status": "No documentation present in source code"
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (Type Definition)",
+      "missing_items": [
+        "Type purpose and description",
+        "Property documentation for each field (id, name, riskLevel, nav)",
+        "Property constraints and valid values",
+        "Usage examples",
+        "Edge cases and considerations"
+      ],
+      "importance": "The Fund type is the core data model. All data flowing through the system is represented as Fund objects. Complete documentation is critical for developers to understand the data structure and constraints.",
+      "severity": "High",
+      "documentation_provided": "docs/fund-type.md"
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService.constructor",
+      "missing_items": [
+        "Constructor purpose and behavior",
+        "Parameter documentation (funds array)",
+        "Initialization behavior explanation",
+        "Usage example",
+        "Any memory or reference implications"
+      ],
+      "importance": "The constructor is the entry point for using FundService. Developers need to understand initialization behavior and expectations about the input array.",
+      "severity": "High",
+      "documentation_provided": "docs/fund-service.md"
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Method purpose and use cases",
+        "Parameter description (id: string)",
+        "Return value explanation including undefined case",
+        "Usage examples",
+        "Performance characteristics",
+        "Edge cases (empty array, not found, case sensitivity)"
+      ],
+      "importance": "This is a critical lookup method. Without documentation, developers may not understand the undefined return value, leading to runtime errors.",
+      "severity": "High",
+      "documentation_provided": "docs/fund-service.md"
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Method purpose and filtering behavior",
+        "Parameter documentation (level: Fund['riskLevel'])",
+        "Valid risk level values",
+        "Return value explanation (array, empty case)",
+        "Usage examples with all risk levels",
+        "Performance characteristics",
+        "Edge cases (empty results, empty array, case sensitivity)"
+      ],
+      "importance": "This filtering method is essential for portfolio segmentation. Developers need clear guidance on valid risk levels and expected behavior.",
+      "severity": "High",
+      "documentation_provided": "docs/fund-service.md"
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Method purpose and calculation details",
+        "Return value explanation",
+        "Mathematical formula or algorithm description",
+        "Usage examples with sample data",
+        "Performance characteristics",
+        "Edge case handling (empty array, division by zero)",
+        "Precision and rounding considerations"
+      ],
+      "importance": "This financial calculation method requires precision documentation. The empty array handling (returns 0 vs division by zero) must be clearly explained.",
+      "severity": "High",
+      "documentation_provided": "docs/fund-service.md"
+    },
+    {
+      "id": 6,
+      "file": "input.ts",
+      "feature": "FundService (Class Overview)",
+      "missing_items": [
+        "Class-level purpose and responsibilities",
+        "High-level architectural role",
+        "Design patterns used",
+        "Thread safety guarantees",
+        "Memory/reference management notes",
+        "Future extensibility considerations"
+      ],
+      "importance": "Without class-level documentation, developers lack context about when and how to use FundService, its architectural role, and any implicit assumptions.",
+      "severity": "Medium",
+      "documentation_provided": "docs/fund-service.md"
+    }
+  ],
+  "documentation_artifacts_created": [
+    {
+      "file": "docs_overview.md",
+      "purpose": "High-level system overview and navigation guide"
+    },
+    {
+      "file": "docs/fund-type.md",
+      "purpose": "Complete reference for Fund type including all properties, examples, and constraints"
+    },
+    {
+      "file": "docs/fund-service.md",
+      "purpose": "Complete API reference for FundService class including all methods, parameters, return values, examples, and performance notes"
+    }
+  ],
+  "reference_links_included": true,
+  "references": [
+    "TypeScript Type Aliases: https://www.typescriptlang.org/docs/handbook/2/types-from-types.html#type-aliases",
+    "TypeScript Union Types: https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+    "TypeScript Classes: https://www.typescriptlang.org/docs/handbook/2/classes.html",
+    "JavaScript Array Methods: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "Defensive Copy Pattern: https://en.wikipedia.org/wiki/Defensive_copy"
+  ],
+  "report_generated": "2025-12-22T00:00:00Z"
+}

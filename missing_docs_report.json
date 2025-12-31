@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "total_missing_docs": 5
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (type)",
+      "missing_items": [
+        "Type purpose",
+        "Property descriptions (id, name, riskLevel, nav)",
+        "Constraints/units for numeric fields (nav)",
+        "Usage example"
+      ],
+      "importance": "Defines the data shape used across the service and any consumers; missing property-level docs lead to incorrect assumptions about units/constraints."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService.constructor",
+      "missing_items": [
+        "Constructor purpose",
+        "Parameter description (ownership / mutability of the provided array)",
+        "Behavior on invalid input (e.g. non-array, null)",
+        "Side-effects (does not clone the array)"
+      ],
+      "importance": "Constructor semantics (mutation/ownership) affect correctness and caller expectations; callers may inadvertently mutate internal state."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description (undefined when not found)",
+        "Usage example",
+        "Complexity and edge cases"
+      ],
+      "importance": "This API is critical for fetching fund data and is likely used by callers to render or operate on a single fund."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description (allowed risk levels)",
+        "Return value description (empty array when none match)",
+        "Usage example",
+        "Complexity and edge cases"
+      ],
+      "importance": "Filtering by risk is a core query; callers must know behavior for unmatched values and that the return is a new array."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Return value description (0 for empty list)",
+        "Numeric units/precision expectations",
+        "Usage example",
+        "Complexity and edge cases (large numbers, negative nav)"
+      ],
+      "importance": "Average NAV is a statistical summary often surfaced in UIs and reports; callers need to know the empty-list behaviour and numeric assumptions."
+    }
+  ]
+}

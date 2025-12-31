@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "total_missing_docs": 6
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (type)",
+      "missing_items": [
+        "Type purpose and responsibilities",
+        "Property descriptions and allowed values",
+        "Example instance"
+      ],
+      "importance": "Defines the shape of data used across the module; essential for correct usage and validation."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService (class)",
+      "missing_items": [
+        "Class purpose and responsibilities",
+        "Constructor behavior and side-effects",
+        "Overall usage examples"
+      ],
+      "importance": "Encapsulates fund-related operations — central public API for callers."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.constructor",
+      "missing_items": [
+        "Parameter description (expected array contents)",
+        "Mutability / ownership semantics (does it copy the array?)",
+        "Behavior with empty arrays"
+      ],
+      "importance": "Initialization contract must be clear to avoid unexpected mutations or runtime errors."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description",
+        "Usage example"
+      ],
+      "importance": "This API is critical for fetching fund data and is used by multiple components."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Parameter allowed values",
+        "Return value description",
+        "Usage example"
+      ],
+      "importance": "Common filter operation — callers need to know allowed risk values and empty-result behavior."
+    },
+    {
+      "id": 6,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Return value description (including behavior with zero funds)",
+        "Numeric edge cases (precision, negative nav)",
+        "Usage example"
+      ],
+      "importance": "Aggregation API used for reporting and calculations — correctness and edge-case behavior must be documented."
+    }
+  ]
+}

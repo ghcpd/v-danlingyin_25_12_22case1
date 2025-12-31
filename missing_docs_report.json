@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "total_missing_docs": 6
+  },
+  "details": [
+    {
+      "id": 1,
+      "file": "input.ts",
+      "feature": "Fund (type)",
+      "missing_items": [
+        "Type purpose/description",
+        "Field descriptions (id, name, riskLevel, nav)",
+        "Usage example showing a valid Fund object"
+      ],
+      "importance": "Defines the data model used across the module and is required for consumers to construct valid inputs."
+    },
+    {
+      "id": 2,
+      "file": "input.ts",
+      "feature": "FundService (class)",
+      "missing_items": [
+        "Class purpose and responsibilities",
+        "Constructor behaviour and state handling",
+        "Lifecycle / mutability considerations"
+      ],
+      "importance": "Core service that encapsulates fund data operations — its behaviour affects all higher-level features."
+    },
+    {
+      "id": 3,
+      "file": "input.ts",
+      "feature": "FundService.getFundById",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description (including undefined behaviour)",
+        "Usage example"
+      ],
+      "importance": "Common lookup API used to fetch a single fund by id; callers must handle not-found cases."
+    },
+    {
+      "id": 4,
+      "file": "input.ts",
+      "feature": "FundService.filterByRisk",
+      "missing_items": [
+        "Function purpose",
+        "Parameters description",
+        "Return value description",
+        "Examples and constraints (case sensitivity, unknown levels)"
+      ],
+      "importance": "Used to obtain portfolios by risk level; consumers need clarity on accepted risk values and expected results."
+    },
+    {
+      "id": 5,
+      "file": "input.ts",
+      "feature": "FundService.calculateAverageNav",
+      "missing_items": [
+        "Function purpose",
+        "Return value description (0 behaviour on empty arrays)",
+        "Numerical precision considerations",
+        "Usage example"
+      ],
+      "importance": "Provides a statistical summary used in reports/UX; callers must understand empty-array handling and value expectations."
+    },
+    {
+      "id": 6,
+      "file": "input.ts",
+      "feature": "FundService.constructor",
+      "missing_items": [
+        "Parameter description (funds)",
+        "Mutability/ownership (whether array is cloned)",
+        "Expected invariants of Fund elements"
+      ],
+      "importance": "Constructor defines how service state is initialized and whether external modifications affect internal state."
+    }
+  ]
+}
